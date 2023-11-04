@@ -1,6 +1,6 @@
 package com.nguyendk.bookservice.command.event;
 
-public class BookCreateEvent {
+public class BookUpdateEvent {
     private String bookId;
     private String name;
     private String author;

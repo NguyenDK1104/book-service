@@ -1,10 +1,20 @@
-package com.nguyendk.bookservice.command.event;
+package com.nguyendk.bookservice.command.command;
 
-public class BookCreateEvent {
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
+
+public class UpdateBookCommand {
+    @TargetAggregateIdentifier
     private String bookId;
     private String name;
     private String author;
     private boolean isReady;
+
+    public UpdateBookCommand(String bookId, String name, String author, boolean isReady) {
+        this.bookId = bookId;
+        this.name = name;
+        this.author = author;
+        this.isReady = isReady;
+    }
 
     public String getBookId() {
         return bookId;
@@ -34,7 +44,7 @@ public class BookCreateEvent {
         return isReady;
     }
 
-    public void setIsReady(boolean isReady) {
+    public void setReady(boolean isReady) {
         this.isReady = isReady;
     }
 }

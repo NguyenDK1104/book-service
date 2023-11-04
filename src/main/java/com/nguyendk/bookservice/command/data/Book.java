@@ -37,11 +37,11 @@ public class Book {
         this.author = author;
     }
 
-    public Boolean getReady() {
+    public Boolean getIsReady() {
         return isReady;
     }
 
-    public void setReady(Boolean ready) {
-        isReady = ready;
+    public void setIsReady(Boolean isReady) {
+        this.isReady = isReady;
     }
 }

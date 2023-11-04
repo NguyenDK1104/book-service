@@ -7,7 +7,7 @@ public class CreateBookCommand {
     private String bookId;
     private String name;
     private String author;
-    private Boolean isReady;
+    private boolean isReady;
 
     public CreateBookCommand(String bookId, String name, String author, Boolean isReady) {
         this.bookId = bookId;
@@ -40,11 +40,11 @@ public class CreateBookCommand {
         this.author = author;
     }
 
-    public Boolean getReady() {
+    public boolean getIsReady() {
         return isReady;
     }
 
-    public void setReady(Boolean ready) {
-        isReady = ready;
+    public void setReady(boolean isReady) {
+        this.isReady = isReady;
     }
 }

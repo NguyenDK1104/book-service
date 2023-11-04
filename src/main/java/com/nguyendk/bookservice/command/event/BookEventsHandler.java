@@ -16,6 +16,20 @@ public class BookEventsHandler {
     public void on(BookCreateEvent event) {
         Book book = new Book();
         BeanUtils.copyProperties(event, book);
+        book.setIsReady(event.getIsReady());
         bookRepository.save(book);
+    }
+    @EventHandler
+    public void on(BookUpdateEvent event) {
+        Book book = bookRepository.findById(event.getBookId()).get();
+        BeanUtils.copyProperties(event, book);
+        book.setIsReady(event.getIsReady());
+        bookRepository.save(book);
+    }
+    @EventHandler
+    public void on(BookDeletedEvent event) {
+        Book book = new Book();
+        BeanUtils.copyProperties(event, book);
+        bookRepository.delete(book);
     }
 }

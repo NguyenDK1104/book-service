@@ -1,10 +1,11 @@
 package com.nguyendk.bookservice.command.model;
 
+
 public class BookRequestModel {
     private String bookId;
     private String name;
     private String author;
-    private Boolean isReady;
+    private boolean isReady;
 
     public String getBookId() {
         return bookId;
@@ -30,11 +31,11 @@ public class BookRequestModel {
         this.author = author;
     }
 
-    public Boolean getReady() {
+    public boolean getIsReady() {
         return isReady;
     }
 
-    public void setReady(Boolean ready) {
-        isReady = ready;
+    public void setIsReady(boolean isReady) {
+        this.isReady = isReady;
     }
 }

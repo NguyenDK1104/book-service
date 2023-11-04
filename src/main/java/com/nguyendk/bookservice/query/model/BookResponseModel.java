@@ -1,6 +1,6 @@
-package com.nguyendk.bookservice.command.event;
+package com.nguyendk.bookservice.query.model;
 
-public class BookCreateEvent {
+public class BookResponseModel {
     private String bookId;
     private String name;
     private String author;
@@ -34,7 +34,7 @@ public class BookCreateEvent {
         return isReady;
     }
 
-    public void setIsReady(boolean isReady) {
-        this.isReady = isReady;
+    public void setIsReady(boolean ready) {
+        isReady = ready;
     }
 }
